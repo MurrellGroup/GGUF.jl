@@ -1,13 +1,17 @@
 name = "GGUF"
-uuid = "d6915618-bf56-4f19-bae7-0bd76bb7d340"
+uuid = "46554747-bf56-4f19-bae7-0bd76bb7d340"
 authors = ["Anton Oresten <antonoresten@gmail.com> and contributors"]
-version = "1.0.0-DEV"
+version = "0.1.0"
+
+[deps]
+BFloat16s = "ab4f0b2a-ad5b-11e8-123f-65d77653426b"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Mmap = "a63ad114-7e13-5084-954f-fe012c677804"
+OrderedCollections = "bac558e1-5e72-5ebc-8fee-abe8a469f55d"
 
 [compat]
+BFloat16s = "0.5"
+LinearAlgebra = "1.11.0"
+Mmap = "1"
+OrderedCollections = "1"
 julia = "1.10"
-
-[extras]
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
-
-[targets]
-test = ["Test"]

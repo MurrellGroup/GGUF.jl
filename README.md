@@ -5,9 +5,6 @@
 
 GGUF.jl is a Julia implementation of the [GGUF specification](https://github.com/ggml-org/ggml/blob/323951f1bdcdfbd5b5ff3a9a7c3770e63b1a560e/docs/gguf.md), a file format for quick loading and saving of deep learning models. Unlike tensor-only file formats like [safetensors](https://huggingface.co/docs/safetensors) (see also [SafeTensors.jl](https://github.com/FluxML/SafeTensors.jl)), GGUF encodes both the tensors and a standardized set of metadata.
 
-> [!WARNING]
-> GGUF.jl does not yet support quantized tensors. Attempting to load a quantized tensor will result in an error.
-
 ## Usage
 
 ```julia
@@ -36,6 +33,9 @@ new_gguf = GGUFObject(metadata, tensors)
 # Serialize to a new file
 GGUF.serialize("my_model.gguf", new_gguf)
 ```
+
+> [!NOTE]
+> GGUF.jl does not yet support quantized tensors. Attempting to load a quantized tensor will result in an error.
 
 ## Installation
 

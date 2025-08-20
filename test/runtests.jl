@@ -8,7 +8,7 @@ using Test
         tensors = Dict(
             "proj" => reshape(collect(1.0:600.0), 20, 30),
             "bias" => collect(Int32, 1:4000),
-            "embed" => reshape(collect(GGUF.BFloat16, 1:400000), 200, 2000),
+            "embed" => reshape(collect(Float16, 1:40000), 20, 50, 40),
         )
         gguf = GGUFObject(metadata, tensors)
         path = joinpath(dir, "test.gguf")
